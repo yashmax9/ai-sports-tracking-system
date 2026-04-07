@@ -1,35 +1,23 @@
-# 🚀 AI Sports Tracking & Analytics System
+# 🚀 Real-Time Sports Analytics AI System
 
 A **GPU-accelerated real-time sports analytics system** built using computer vision and deep learning.
+
 This project detects, tracks, and analyses players in sports videos, providing **movement insights, team classification, and performance analytics**.
 
 ---
 
-## 🎯 Overview
+## 🎯 Key Features
 
-This system combines **YOLOv8 object detection** and **DeepSORT tracking** to create a complete pipeline for analysing player behaviour in real time.
-
-It goes beyond simple detection by adding:
-
-* 📊 Movement analytics
-* 🧠 Team classification
-* 🔁 Re-identification
-* 🔥 Heatmap visualisation
-
----
-
-## ✨ Features
-
-* ⚡ **Real-time Detection (YOLOv8 + GPU)**
-* 🎯 **Multi-object Tracking (DeepSORT)**
-* 🧠 **Re-identification System (Histogram-based)**
-* 👕 **Team Classification (KMeans clustering on jersey colors)**
-* 📏 **Distance Tracking per Player**
-* 🏃 **Speed Estimation**
-* 📍 **Trajectory Tracking**
-* 🔥 **Heatmap Generation**
-* ⚠️ **Occlusion Detection**
-* 🎥 **Supports Both Video & Live Webcam**
+* ⚡ YOLOv8 **real-time detection (GPU accelerated)**
+* 🎯 DeepSORT **multi-object tracking**
+* 🧠 Re-identification system (appearance-based)
+* 👕 Team classification (jersey color clustering)
+* 📏 Distance tracking per player
+* 🏃 Speed estimation
+* 📍 Trajectory tracking
+* 🔥 Heatmap generation
+* ⚠️ Occlusion detection
+* 🎥 Supports both **video & live webcam**
 
 ---
 
@@ -42,55 +30,29 @@ YOLOv8 Detection (GPU)
    ↓
 DeepSORT Tracking
    ↓
-Re-ID Memory System
+Re-ID System
    ↓
-Team Classification (KMeans)
+Team Classification
    ↓
-Movement Analysis (Distance + Speed)
+Movement Analytics (Distance + Speed)
    ↓
 Heatmap + Occlusion Detection
    ↓
-Final Annotated Output
+Final Output
 ```
-
----
 
 ## 🛠️ Tech Stack
 
-* **Python**
-* **OpenCV**
-* **PyTorch (GPU)**
-* **Ultralytics YOLOv8**
-* **DeepSORT**
-* **Scikit-learn (KMeans)**
+* Python
+* OpenCV
+* PyTorch (CUDA)
+* YOLOv8 (Ultralytics)
+* DeepSORT
+* Scikit-learn
 
 ---
 
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/YOUR_USERNAME/ai-sports-tracking-system.git
-cd ai-sports-tracking-system
-
-python -m venv venv
-venv\Scripts\activate
-
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ Usage
-
-### 🔹 Video Mode
-
-Place your video inside:
-
-```
-input/video.mp4
-```
-
-Run:
+## ▶️ How to Run
 
 ```bash
 python main.py
@@ -98,12 +60,12 @@ python main.py
 
 ---
 
-### 🔹 Real-Time Mode (Webcam)
+## ⚙️ Modes
 
-In `main.py`, change:
+Change in `main.py`:
 
-```python
-MODE = "realtime"
+```
+MODE = "video"      # or "realtime"
 ```
 
 ---
@@ -125,49 +87,38 @@ sports-tracking-ai/
 
 ---
 
-## 📊 Output
+## ⚡ Performance
 
-* Real-time annotated video
-* Player IDs, distance, and speed
-* Team classification (color-based)
-* Heatmap overlay
-* Occlusion alerts
+* GPU acceleration enabled
+* Real-time processing supported
+* Optimised pipeline design
 
 ---
 
-## ⚡ Performance
+## 🎯 Real-World Applications
 
-* GPU acceleration enabled (CUDA)
-* Optimised for real-time processing
-* Adjustable frame skipping for performance tuning
+* Sports analytics & coaching insights
+* Player performance tracking
+* Match strategy analysis
 
 ---
 
 ## ⚠️ Limitations
 
-* Team classification depends on clear jersey color differences
-* Re-ID is lightweight (histogram-based, not deep learning)
-* Performance varies based on GPU capability
+* Team classification depends on jersey color contrast
+* Re-ID is lightweight (not deep learning based)
 
 ---
 
 ## 🔥 Future Improvements
 
-* 🎯 Ball tracking
-* 🧠 Deep learning-based team classification
-* 📊 Web dashboard (Streamlit)
-* 📈 Advanced player analytics (zones, passes, events)
+* Ball tracking
+* Deep learning-based team detection
+* Web dashboard (Streamlit)
+* Advanced analytics
 
 ---
 
 ## 👨‍💻 Author
 
 **Yash Sharma**
-
----
-
-## ⭐ Final Note
-
-This project demonstrates a **complete real-time AI pipeline**, combining detection, tracking, and analytics into a modular and scalable system.
-
----
